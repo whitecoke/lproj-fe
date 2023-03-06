@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import * as css  from "./register.css";
+import "./register.css";
 
 export default function App() {
   const formSchema = yup.object({
@@ -33,7 +33,6 @@ export default function App() {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm({
     mode: "onChange",
@@ -45,69 +44,70 @@ export default function App() {
   }
 
   return (
-    <div className="body-bg min-h-screen pt-12 md:pt-20 pb-12 md:pb-20 px-7 md:px-0">
-      <div className="">
-        <header className="max-w-lg mx-auto">
-          <h1 className="text-4xl font-bold text-white text-center">회원가입</h1>
+    <div class="body-bg min-h-screen pt-12 md:pt-20 pb-12 md:pb-20 px-7 md:px-0">
+      <div class="">
+        <header class="max-w-lg mx-auto">
+          <h1 class="text-4xl font-bold text-white text-center mb-3">반갑습니다.</h1>
+          <h1 class="text-4xl font-bold text-white text-center">광명세탁소 입니다!</h1>
         </header>
 
-        <main className="bg-white max-w-lg mx-auto p-8 md:p-12 my-10 rounded-lg shadow-2xl">
+        <main class="bg-white max-w-lg mx-auto p-8 md:p-12 my-10 rounded-lg shadow-2xl">
           <section>
-            <h3 className="font-bold text-2xl">할인 정보를 드리기 위한,</h3>
-            <p className="text-gray-600 pt-2"> 정보를 입력해주세요!</p>
+            <h3 class="font-bold text-2xl">세탁 완료 및 할인 정보를 드리기 위한,</h3>
+            <p class="text-gray-600 pt-2"> 정보를 입력해주세요!</p>
           </section>
 
-          <section className="mt-10">
-            <form className="flex flex-col" onSubmit={handleSubmit(onSubmit)}>
+          <section class="mt-10">
+            <form class="flex flex-col" onSubmit={handleSubmit(onSubmit)}>
               {/* <InputComponent labelName="이름" inputType="text" inputId="name" /> */}
-              <div className="pt-3 rounded bg-gray-200">
-                <label className="block text-gray-700 text-sm font-bold mb-2 ml-3">
+              <div class="pt-3 rounded bg-gray-200">
+                <label class="block text-gray-700 text-sm font-bold mb-2 ml-3">
                   이름
                 </label>
                 <input 
                   type="text" 
                   id={"name"} 
-                  className="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3" 
+                  class="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3" 
                   {...register("name")}
                 />
               </div>
-              <div>{errors.name && <p className="mt-1 text-sm text-pink-600">{errors.name.message}</p>}</div>
-              <div className="mt-6 pt-3 rounded bg-gray-200">
-                <label className="block text-gray-700 text-sm font-bold mb-2 ml-3">
+              <div>{errors.name && <p class="mt-1 text-sm text-pink-600">{errors.name.message}</p>}</div>
+              <div class="mt-6 pt-3 rounded bg-gray-200">
+                <label class="block text-gray-700 text-sm font-bold mb-2 ml-3">
                   이메일
                 </label>
                 <input 
                   type="email" 
                   id={"email"} 
-                  className="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3" 
+                  class="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3" 
                   {...register("email")}
                 />
               </div>
-              <div>{errors.email && <p className="mt-1 text-sm text-pink-600">{errors.email.message}</p>}</div>
-              <div className="mt-6 pt-3 rounded bg-gray-200">
-                <label className="block text-gray-700 text-sm font-bold mb-2 ml-3">
+              <div>{errors.email && <p class="mt-1 text-sm text-pink-600">{errors.email.message}</p>}</div>
+              <div class="mt-6 pt-3 rounded bg-gray-200">
+                <label class="block text-gray-700 text-sm font-bold mb-2 ml-3">
                   핸드폰
                 </label>
                 <input 
                   type="number" 
                   id={"phone"} 
-                  className="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3 invalid:border-pink-500 invalid:text-pink-600" 
+                  class="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3 invalid:border-pink-500 invalid:text-pink-600" 
                   {...register("phone")}
                 />
               </div>
-              <div>{errors.phone && <p className="mt-1 text-sm text-pink-600">{errors.phone.message}</p>}</div>
-              <label className="mt-6 flex justify-end items-center space-x-2 cursor-pointer">
+              <div>{errors.phone && <p class="mt-1 text-sm text-pink-600">{errors.phone.message}</p>}</div>
+              <label class="mt-6 flex justify-end items-center space-x-2 cursor-pointer">
                 <input 
                     type="checkbox"
                     id="check"
-                    className="accent-purple-600"
+                    class="accent-purple-600"
                     {...register("check")}
                 />
-                <div className="text-sm text-purple-600 hover:text-purple-700 hover:underline"> 개인정보 수집 동의</div>
+                <div class="text-sm text-purple-600 hover:text-purple-700 hover:underline"> 개인정보 수집 동의</div>
               </label>
-              <div className="flex justify-end">{errors.check && <p className="mt-1 text-sm text-pink-600">{errors.check.message}</p>}</div>
+              <div class="flex justify-end">{errors.check && <p class="mt-1 text-sm text-pink-600">{errors.check.message}</p>}</div>
                 <button 
-                  className="mt-6 bg-purple-600 hover:bg-purple-700 disabled:bg-gray-200 text-white disabled:text-gray-500 font-bold py-2 rounded shadow-lg disabled:shadow-none hover:shadow-xl transition duration-200"
+                  class="mt-6 bg-purple-600 hover:bg-purple-700 disabled:bg-gray-200 text-white disabled:text-gray-500 font-bold py-2 rounded shadow-lg disabled:shadow-none hover:shadow-xl transition duration-200"
                   type="submit"
                   disabled={Object.keys(errors).length !== 0}
                 >
@@ -117,14 +117,10 @@ export default function App() {
           </section>
         </main>
 
-        <footer className="max-w-lg mx-auto flex justify-center text-white">
-          <a href="#" className="hover:underline">
-            인천광역시 공촌동 314
-          </a>
-          <span className="mx-3">•</span>
-          <a href="#" className="hover:underline">
-            세탁소
-          </a>
+        <footer class="max-w-lg mx-auto flex justify-center text-white">
+            경명대로 694번길 10
+          <span class="mx-3">•</span>
+            광명세탁소
         </footer>
       </div>
     </div>
