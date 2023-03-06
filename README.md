@@ -1,5 +1,3 @@
-# :zap: lproj-fe
+# :zap: lproj-fe [Visit Site](https://whitecoke.github.io/lproj-fe/)
 
 laundry project front-end
-
-# [Visit Site](https://whitecoke.github.io/lproj-fe/)
