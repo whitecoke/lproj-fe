@@ -18,7 +18,7 @@ function App() {
 
 function Wrapper() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route path="/" exact element={<App />} />
         <Route path="/register" exact element={<Register />} />
