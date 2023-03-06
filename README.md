@@ -1,1 +1,3 @@
-# lproj-fe
+# :zap: lproj-fe
+
+laundry project front-end
