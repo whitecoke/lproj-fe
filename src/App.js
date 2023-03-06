@@ -1,6 +1,6 @@
 import "./App.css";
 import Register from "./page/register.js";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Link, HashRouter } from "react-router-dom";
 
 function App() {
   return (
@@ -18,12 +18,12 @@ function App() {
 
 function Wrapper() {
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <HashRouter>
       <Routes>
-        <Route path="/" exact element={<App />} />
-        <Route path="/register" exact element={<Register />} />
+        <Route path="/" element={<App />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
